@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KbZ-Ij-Hvo">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menu" id="KbZ-Ij-Hvo">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KbZ-Ij-Hvo" id="EJq-Zw-i1i">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -45,8 +45,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="khM-YH-NAP" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Ni2-ep-5On"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oMn-2d-oRy">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="consultar" id="oMn-2d-oRy">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oMn-2d-oRy" id="mPS-QY-zP7">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -60,8 +63,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5WW-He-cFD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9ju-6g-bX2"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="elw-ah-8CF">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="isesion" id="elw-ah-8CF">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elw-ah-8CF" id="04V-5v-sGI">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -76,12 +82,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SGo-wc-xwl">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SGo-wc-xwl" id="iFS-dV-Ia7">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="srV-cx-rwR" id="kcn-U5-UhA"/>
@@ -91,7 +91,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7O-iT-INK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="282"/>
+            <point key="canvasLocation" x="396" y="282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FSm-Es-yNj">
@@ -101,24 +101,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="e3v-E7-9LA" kind="relationship" relationship="rootViewController" id="DnI-VW-O2O"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZx-qm-5hw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789" y="218"/>
+            <point key="canvasLocation" x="814" y="218"/>
         </scene>
-        <!--View Controller-->
+        <!--Consultar Controller-->
         <scene sceneID="V5v-uu-GOw">
             <objects>
-                <viewController id="e3v-E7-9LA" sceneMemberID="viewController">
+                <viewController id="e3v-E7-9LA" customClass="ConsultarController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8vc-9q-Hie">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lBm-AC-VV7">
+                        <barButtonItem key="leftBarButtonItem" image="1427960059_menu-alt-32.png" style="plain" id="0ZR-Zp-ODy"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnMenu" destination="0ZR-Zp-ODy" id="qg4-pf-2Cf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEa-d9-7q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="218"/>
+            <point key="canvasLocation" x="1264" y="218"/>
         </scene>
         <!--Home Controller-->
         <scene sceneID="pnk-BX-P9b">
@@ -138,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaJ-94-v3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381" y="1037"/>
+            <point key="canvasLocation" x="782" y="1028"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fkq-6t-Xi3">
@@ -154,7 +163,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Us-JC-nQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-35" y="1037"/>
+            <point key="canvasLocation" x="404" y="1022"/>
         </scene>
     </scenes>
     <resources>
@@ -165,4 +174,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ni2-ep-5On"/>
+    </inferredMetricsTieBreakers>
 </document>

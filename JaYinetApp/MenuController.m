@@ -7,15 +7,23 @@
 //
 
 #import "MenuController.h"
+#import "SWRevealViewController.h"
 
 @interface MenuController ()
 
 @end
 
-@implementation MenuController
+@implementation MenuController{
+    NSArray *menu;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+     menu = @[@"menu",@"consultar", @"isesion"];
+    
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -29,19 +37,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    
+    
+    return [menu count];
+    
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // Configure the cell...
+    
+    NSString *cellIdentifier = [menu objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    
+    return cell;
+}
+
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

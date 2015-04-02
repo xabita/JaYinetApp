@@ -45,17 +45,14 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="khM-YH-NAP" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Ni2-ep-5On"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="consultar" id="oMn-2d-oRy">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inicio" id="oMn-2d-oRy">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oMn-2d-oRy" id="mPS-QY-zP7">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hzR-Zt-LYX">
-                                            <rect key="frame" x="49" y="14" width="74" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hzR-Zt-LYX">
+                                            <rect key="frame" x="49" y="14" width="41" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -64,15 +61,33 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="5WW-He-cFD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9ju-6g-bX2"/>
+                                    <segue destination="khM-YH-NAP" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="vVW-0V-b3H"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="isesion" id="elw-ah-8CF">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="consultar" id="elw-ah-8CF">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elw-ah-8CF" id="04V-5v-sGI">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar Sesión" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uld-DI-pjj">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uld-DI-pjj">
+                                            <rect key="frame" x="45" y="8" width="74" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5WW-He-cFD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jIf-v1-SvE"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="isesion" id="Nye-Kt-rrh">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nye-Kt-rrh" id="HPl-Zh-tQa">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar Sesión" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3y0-vH-ipV">
                                             <rect key="frame" x="45" y="8" width="103" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -81,6 +96,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="oUg-Dg-MfA" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="MVl-Sz-YNj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -107,7 +125,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZx-qm-5hw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="218"/>
+            <point key="canvasLocation" x="942" y="-386"/>
         </scene>
         <!--Consultar Controller-->
         <scene sceneID="V5v-uu-GOw">
@@ -127,7 +145,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEa-d9-7q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264" y="218"/>
+            <point key="canvasLocation" x="1423" y="-386"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q0p-K0-I7H">
+            <objects>
+                <navigationController id="oUg-Dg-MfA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vV1-0y-GGA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gqd-TO-9JT" kind="relationship" relationship="rootViewController" id="F9e-sR-HDY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sM-QU-0h5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="351"/>
+        </scene>
+        <!--Iniciar Sesion Controller-->
+        <scene sceneID="eOT-p9-FM5">
+            <objects>
+                <viewController id="gqd-TO-9JT" customClass="IniciarSesionController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEw-eH-EuK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PeA-Ey-T33">
+                        <barButtonItem key="leftBarButtonItem" image="1427960059_menu-alt-32.png" style="plain" id="DHv-eC-9cI"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnMenu" destination="DHv-eC-9cI" id="dSe-7v-DyI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwd-GV-6r7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="344"/>
         </scene>
         <!--Home Controller-->
         <scene sceneID="pnk-BX-P9b">
@@ -147,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaJ-94-v3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="1028"/>
+            <point key="canvasLocation" x="830" y="1030"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fkq-6t-Xi3">
@@ -175,6 +229,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ni2-ep-5On"/>
+        <segue reference="vVW-0V-b3H"/>
     </inferredMetricsTieBreakers>
 </document>

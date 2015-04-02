@@ -18,6 +18,7 @@
 		26D805881ACCDB62003497F5 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D805871ACCDB62003497F5 /* MenuController.m */; };
 		26D8058B1ACCE24B003497F5 /* 1427960059_menu-alt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D8058A1ACCE24B003497F5 /* 1427960059_menu-alt-32.png */; };
 		26D8058F1ACD02AE003497F5 /* ConsultarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D8058E1ACD02AE003497F5 /* ConsultarController.m */; };
+		26D805921ACD0875003497F5 /* IniciarSesionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D805911ACD0875003497F5 /* IniciarSesionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		26D8058A1ACCE24B003497F5 /* 1427960059_menu-alt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1427960059_menu-alt-32.png"; sourceTree = "<group>"; };
 		26D8058D1ACD02AE003497F5 /* ConsultarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultarController.h; sourceTree = "<group>"; };
 		26D8058E1ACD02AE003497F5 /* ConsultarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultarController.m; sourceTree = "<group>"; };
+		26D805901ACD0875003497F5 /* IniciarSesionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IniciarSesionController.h; sourceTree = "<group>"; };
+		26D805911ACD0875003497F5 /* IniciarSesionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IniciarSesionController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 			children = (
 				26D8058D1ACD02AE003497F5 /* ConsultarController.h */,
 				26D8058E1ACD02AE003497F5 /* ConsultarController.m */,
+				26D805901ACD0875003497F5 /* IniciarSesionController.h */,
+				26D805911ACD0875003497F5 /* IniciarSesionController.m */,
 			);
 			name = Consultas;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			files = (
 				26D8044D1ACCD489003497F5 /* HomeController.m in Sources */,
 				26D8044A1ACCD489003497F5 /* AppDelegate.m in Sources */,
+				26D805921ACD0875003497F5 /* IniciarSesionController.m in Sources */,
 				26D805881ACCDB62003497F5 /* MenuController.m in Sources */,
 				26D8058F1ACD02AE003497F5 /* ConsultarController.m in Sources */,
 				26D804471ACCD489003497F5 /* main.m in Sources */,

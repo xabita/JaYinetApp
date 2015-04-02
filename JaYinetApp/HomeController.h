@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface HomeController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnMenu;
 
 @end
 

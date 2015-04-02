@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		26D804471ACCD489003497F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D804461ACCD489003497F5 /* main.m */; };
 		26D8044A1ACCD489003497F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D804491ACCD489003497F5 /* AppDelegate.m */; };
-		26D8044D1ACCD489003497F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D8044C1ACCD489003497F5 /* ViewController.m */; };
+		26D8044D1ACCD489003497F5 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D8044C1ACCD489003497F5 /* HomeController.m */; };
 		26D804501ACCD489003497F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D8044E1ACCD489003497F5 /* Main.storyboard */; };
 		26D804521ACCD489003497F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D804511ACCD489003497F5 /* Images.xcassets */; };
 		26D804551ACCD489003497F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D804531ACCD489003497F5 /* LaunchScreen.xib */; };
 		26D804611ACCD489003497F5 /* JaYinetAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D804601ACCD489003497F5 /* JaYinetAppTests.m */; };
+		26D805801ACCD83B003497F5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D8057F1ACCD83B003497F5 /* SWRevealViewController.m */; };
+		26D805881ACCDB62003497F5 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D805871ACCDB62003497F5 /* MenuController.m */; };
+		26D8058B1ACCE24B003497F5 /* 1427960059_menu-alt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D8058A1ACCE24B003497F5 /* 1427960059_menu-alt-32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,19 @@
 		26D804461ACCD489003497F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26D804481ACCD489003497F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26D804491ACCD489003497F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		26D8044B1ACCD489003497F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		26D8044C1ACCD489003497F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		26D8044B1ACCD489003497F5 /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		26D8044C1ACCD489003497F5 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		26D8044F1ACCD489003497F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26D804511ACCD489003497F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26D804541ACCD489003497F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		26D8045A1ACCD489003497F5 /* JaYinetAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JaYinetAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D8045F1ACCD489003497F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D804601ACCD489003497F5 /* JaYinetAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JaYinetAppTests.m; sourceTree = "<group>"; };
+		26D8057E1ACCD83B003497F5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		26D8057F1ACCD83B003497F5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		26D805861ACCDB62003497F5 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		26D805871ACCDB62003497F5 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
+		26D8058A1ACCE24B003497F5 /* 1427960059_menu-alt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1427960059_menu-alt-32.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +89,12 @@
 		26D804431ACCD489003497F5 /* JaYinetApp */ = {
 			isa = PBXGroup;
 			children = (
+				26D805891ACCE23A003497F5 /* Media */,
+				26D805821ACCD98E003497F5 /* Menu */,
+				26D805811ACCD986003497F5 /* Home */,
+				26D8046A1ACCD7A9003497F5 /* Frameworks */,
 				26D804481ACCD489003497F5 /* AppDelegate.h */,
 				26D804491ACCD489003497F5 /* AppDelegate.m */,
-				26D8044B1ACCD489003497F5 /* ViewController.h */,
-				26D8044C1ACCD489003497F5 /* ViewController.m */,
 				26D8044E1ACCD489003497F5 /* Main.storyboard */,
 				26D804511ACCD489003497F5 /* Images.xcassets */,
 				26D804531ACCD489003497F5 /* LaunchScreen.xib */,
@@ -117,6 +127,49 @@
 				26D8045F1ACCD489003497F5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26D8046A1ACCD7A9003497F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26D8057D1ACCD83B003497F5 /* SWRevealViewController */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26D8057D1ACCD83B003497F5 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				26D8057E1ACCD83B003497F5 /* SWRevealViewController.h */,
+				26D8057F1ACCD83B003497F5 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		26D805811ACCD986003497F5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				26D8044B1ACCD489003497F5 /* HomeController.h */,
+				26D8044C1ACCD489003497F5 /* HomeController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		26D805821ACCD98E003497F5 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				26D805861ACCDB62003497F5 /* MenuController.h */,
+				26D805871ACCDB62003497F5 /* MenuController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		26D805891ACCE23A003497F5 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				26D8058A1ACCE24B003497F5 /* 1427960059_menu-alt-32.png */,
+			);
+			name = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D8058B1ACCE24B003497F5 /* 1427960059_menu-alt-32.png in Resources */,
 				26D804501ACCD489003497F5 /* Main.storyboard in Resources */,
 				26D804551ACCD489003497F5 /* LaunchScreen.xib in Resources */,
 				26D804521ACCD489003497F5 /* Images.xcassets in Resources */,
@@ -219,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26D8044D1ACCD489003497F5 /* ViewController.m in Sources */,
+				26D8044D1ACCD489003497F5 /* HomeController.m in Sources */,
 				26D8044A1ACCD489003497F5 /* AppDelegate.m in Sources */,
+				26D805881ACCDB62003497F5 /* MenuController.m in Sources */,
 				26D804471ACCD489003497F5 /* main.m in Sources */,
+				26D805801ACCD83B003497F5 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

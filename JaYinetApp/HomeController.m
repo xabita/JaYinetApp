@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.title=@"HOME";
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
     
     SWRevealViewController *revealViewController = self.revealViewController;

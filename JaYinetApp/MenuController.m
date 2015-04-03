@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
      menu = @[@"menu",@"inicio",@"consultar", @"isesion"];
-    
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"estetoscopioM1.png"]];
     
     
     // Uncomment the following line to preserve selection between presentations.

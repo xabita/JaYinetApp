@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import <ParseCrashReporting/ParseCrashReporting.h>
+
+
 
 @interface AppDelegate ()
 
@@ -17,7 +21,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+  
+#warning Revisar si se habilitara el crash reporting
+  //  [ParseCrashReporting enable];
+    
+    
+    // Override point for customization after application launch.
+    [Parse setApplicationId:@"Dfgwmw8KdFMS1FqtMsJTEJwIS9ZzxxmZyn1pRZsO"
+                  clientKey:@"DTzSdMo14iEgC759YXxrr3SXQDoPJjfehvzKZ376"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
+    
+   NSDictionary *dimensions = @{
+                                 // What type of news is this?
+                                 @"category": @"Principal",
+                                 // Is it a weekday or the weekend?
+                                 @"dayType": @"weekday",
+                                 };
+    // Send the dimensions to Parse along with the 'read' event
+    
+  
+     /*
+    
+   [PFAnalytics trackEvent:@"read" dimensions:dimensions];*/
+    
+    
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -41,5 +82,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+//Metodos de Parse para notificaciones
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
+
+
 
 @end

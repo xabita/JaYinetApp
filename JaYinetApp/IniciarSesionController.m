@@ -8,10 +8,16 @@
 
 #import "IniciarSesionController.h"
 #import "SWRevealViewController.h"
+#import <Parse/Parse.h>
+
+UIAlertView     *alert;
+
 
 @interface IniciarSesionController ()
 
 @end
+
+
 
 @implementation IniciarSesionController
 
@@ -30,6 +36,8 @@
         [self.btnMenu setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,5 +54,43 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)btnIniciarSesion:(UIButton *)sender {
+    [PFUser logInWithUsernameInBackground:self.txtUsuario.text password:self.txtContrasenia.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            NSLog(@"logueadooooo");
+                                            // Associate the device with a user
+                                            PFInstallation *installation = [PFInstallation currentInstallation];
+                                            installation[@"user"] = [PFUser currentUser];
+                                            [installation saveInBackground];
+                                            
+                                            [self performSegueWithIdentifier:@"SessionSegue" sender:self];
+                                            
+                                            
+                                        } else {
+                                            
+                                            alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
+                                                                               message:@"Error de inicio de sesion"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"Cancelar"
+                                                                     otherButtonTitles: nil];
+                                            [alert show];
+                                            
+                                           // [self performSegueWithIdentifier:@"segueCerrarSesion" sender:self];
+                                            
+                                            
+                                            
+                                        }
+                                    }];
+
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
+
 
 @end

@@ -45,6 +45,10 @@
 		26D805C31ACE0C78003497F5 /* corazon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26D805C21ACE0C78003497F5 /* corazon.jpg */; };
 		26D805C51ACE0CD2003497F5 /* estetoscopioM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26D805C41ACE0CD2003497F5 /* estetoscopioM.jpg */; };
 		26D805C71ACE1073003497F5 /* estetoscopioM1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D805C61ACE1073003497F5 /* estetoscopioM1.png */; };
+		26DC7A251ACE6CC6006E0643 /* RegistroPaciente.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A241ACE6CC6006E0643 /* RegistroPaciente.m */; };
+		26DC7A281ACFCD88006E0643 /* BuscarPaciente.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A271ACFCD88006E0643 /* BuscarPaciente.m */; };
+		26DC7A2B1ACFE31F006E0643 /* HistorialEstatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A2A1ACFE31F006E0643 /* HistorialEstatus.m */; };
+		26DC7A2E1ACFE63B006E0643 /* EstatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A2D1ACFE63B006E0643 /* EstatusCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,14 @@
 		26D805C21ACE0C78003497F5 /* corazon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = corazon.jpg; sourceTree = "<group>"; };
 		26D805C41ACE0CD2003497F5 /* estetoscopioM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = estetoscopioM.jpg; sourceTree = "<group>"; };
 		26D805C61ACE1073003497F5 /* estetoscopioM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estetoscopioM1.png; sourceTree = "<group>"; };
+		26DC7A231ACE6CC6006E0643 /* RegistroPaciente.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistroPaciente.h; sourceTree = "<group>"; };
+		26DC7A241ACE6CC6006E0643 /* RegistroPaciente.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistroPaciente.m; sourceTree = "<group>"; };
+		26DC7A261ACFCD88006E0643 /* BuscarPaciente.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuscarPaciente.h; sourceTree = "<group>"; };
+		26DC7A271ACFCD88006E0643 /* BuscarPaciente.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuscarPaciente.m; sourceTree = "<group>"; };
+		26DC7A291ACFE31F006E0643 /* HistorialEstatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistorialEstatus.h; sourceTree = "<group>"; };
+		26DC7A2A1ACFE31F006E0643 /* HistorialEstatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistorialEstatus.m; sourceTree = "<group>"; };
+		26DC7A2C1ACFE63B006E0643 /* EstatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstatusCell.h; sourceTree = "<group>"; };
+		26DC7A2D1ACFE63B006E0643 /* EstatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstatusCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +316,14 @@
 				26375AA01ACE2EA4008BD965 /* HistorialPacienteSocial.m */,
 				26375AA21ACE2F33008BD965 /* MenuSocialController.h */,
 				26375AA31ACE2F33008BD965 /* MenuSocialController.m */,
+				26DC7A231ACE6CC6006E0643 /* RegistroPaciente.h */,
+				26DC7A241ACE6CC6006E0643 /* RegistroPaciente.m */,
+				26DC7A261ACFCD88006E0643 /* BuscarPaciente.h */,
+				26DC7A271ACFCD88006E0643 /* BuscarPaciente.m */,
+				26DC7A291ACFE31F006E0643 /* HistorialEstatus.h */,
+				26DC7A2A1ACFE31F006E0643 /* HistorialEstatus.m */,
+				26DC7A2C1ACFE63B006E0643 /* EstatusCell.h */,
+				26DC7A2D1ACFE63B006E0643 /* EstatusCell.m */,
 			);
 			name = TrabajoSocial;
 			sourceTree = "<group>";
@@ -416,13 +436,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D8044D1ACCD489003497F5 /* HomeController.m in Sources */,
+				26DC7A2B1ACFE31F006E0643 /* HistorialEstatus.m in Sources */,
+				26DC7A251ACE6CC6006E0643 /* RegistroPaciente.m in Sources */,
 				26375AA41ACE2F33008BD965 /* MenuSocialController.m in Sources */,
 				26D8044A1ACCD489003497F5 /* AppDelegate.m in Sources */,
+				26DC7A281ACFCD88006E0643 /* BuscarPaciente.m in Sources */,
 				26D805921ACD0875003497F5 /* IniciarSesionController.m in Sources */,
 				26D805BB1ACD4AD7003497F5 /* HistorialCell.m in Sources */,
 				26375AA11ACE2EA4008BD965 /* HistorialPacienteSocial.m in Sources */,
 				26D805881ACCDB62003497F5 /* MenuController.m in Sources */,
 				26D805B81ACD4962003497F5 /* HistorialPacienteController.m in Sources */,
+				26DC7A2E1ACFE63B006E0643 /* EstatusCell.m in Sources */,
 				26D8058F1ACD02AE003497F5 /* ConsultarController.m in Sources */,
 				26D804471ACCD489003497F5 /* main.m in Sources */,
 				26D805801ACCD83B003497F5 /* SWRevealViewController.m in Sources */,

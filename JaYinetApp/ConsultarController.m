@@ -112,10 +112,6 @@ NSString *idpaciente;
         segundoView.nopaciente = self.txtRespaciente.text;
     }*/
     
-    
-   
-    
-    
     if ([[segue identifier] isEqualToString:@"SegueHistorialN"]) {
         UINavigationController *navController = [segue destinationViewController];
         HistorialPacienteController *ViewHistorial = (HistorialPacienteController *)([navController viewControllers][0]);

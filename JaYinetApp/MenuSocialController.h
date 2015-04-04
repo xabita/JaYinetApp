@@ -10,4 +10,9 @@
 
 @interface MenuSocialController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnMenu;
+
+
+- (IBAction)btnMenu:(UIBarButtonItem *)sender;
+
 @end

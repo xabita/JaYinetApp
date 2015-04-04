@@ -1,22 +1,23 @@
 //
-//  HistorialPacienteController.m
+//  HistorialEstatus.m
 //  JaYinetApp
 //
-//  Created by Elizabeth Martínez Gómez on 02/04/15.
+//  Created by Elizabeth Martínez Gómez on 04/04/15.
 //  Copyright (c) 2015 Elizabeth Martínez Gómez. All rights reserved.
 //
 
-#import "HistorialPacienteController.h"
-#import <Parse/Parse.h>
-#import "HistorialCell.h"
+#import "HistorialEstatus.h"
+#import <parse/Parse.h>
+#import "EstatusCell.h"
 
 NSString *identificadorPaciente;
 
-@interface HistorialPacienteController ()
+
+@interface HistorialEstatus ()
 
 @end
 
-@implementation HistorialPacienteController
+@implementation HistorialEstatus
 
 - (id)initWithCoder:(NSCoder *)aCoder
 {
@@ -42,15 +43,18 @@ NSString *identificadorPaciente;
     return self;
 }
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    identificadorPaciente =_idpaciente;
-         NSLog(@"Pacienteeeeeee %@", identificadorPaciente);
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+       identificadorPaciente =_idpaciente;
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
@@ -80,26 +84,24 @@ NSString *identificadorPaciente;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
     
-    static NSString *CellIdentifier = @"CellHistorial";
+    static NSString *CellIdentifier = @"CellEstatus";
     
-    HistorialCell *cell = (HistorialCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    EstatusCell *cell = (EstatusCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[HistorialCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[EstatusCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell
     cell.lblEstatus.text = [object objectForKey:@"desc_estado"];
-   // NSLog(@"Pacienteeeeeee %@", identificadorPaciente);
-
+    // NSLog(@"Pacienteeeeeee %@", identificadorPaciente);
+    
     return cell;
 }
 
 
-
-
 - (IBAction)btnMenu:(UIBarButtonItem *)sender {
-
-[self dismissViewControllerAnimated:YES completion:nil];
+ [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MenuSocialController.h"
+#import "SWRevealViewController.h"
 
 @interface MenuSocialController ()
 
@@ -17,6 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.btnMenu setTarget: self.revealViewController];
+        [self.btnMenu setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +45,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)btnMenu:(UIBarButtonItem *)sender {
+     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

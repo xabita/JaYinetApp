@@ -24,6 +24,7 @@
 - (IBAction)btnMenu:(UIBarButtonItem *)sender;
 
 @property (strong, nonatomic) IBOutlet UIButton *btnHistorial;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnEstado;
+//@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnEstado;
+@property (strong, nonatomic) IBOutlet UIButton *btnEstado;
 
 @end

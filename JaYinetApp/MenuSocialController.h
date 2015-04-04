@@ -14,5 +14,6 @@
 
 
 - (IBAction)btnMenu:(UIBarButtonItem *)sender;
+- (IBAction)btnCerrarSesion:(UIButton *)sender;
 
 @end

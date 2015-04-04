@@ -10,9 +10,9 @@
 #import <Parse/Parse.h>
 #import "SWRevealViewController.h"
 #import "HistorialEstatus.h"
+#import "Actualiza_Estatus.h"
 
 NSString *idpaciente;
-
 @interface BuscarPaciente ()
 
 @end
@@ -170,10 +170,10 @@ NSString *idpaciente;
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    /*   NSLog(@"segueRespaciente retrieved %@", @"saga");
-     if ([[segue identifier] isEqualToString:@"segueRespaciente"]) {
-     ViewEstado *segundoView = [segue destinationViewController];
-     segundoView.nopaciente = self.txtRespaciente.text;
+    /*  NSLog(@"segueRespaciente retrieved %@", @"SagaEstatus");
+     if ([[segue identifier] isEqualToString:@"SagaEstatus"]) {
+     Actualiza_Estatus *segundoView = [segue destinationViewController];
+     segundoView.nopaciente = self.txtNoPaciente.text;
      }*/
     
     if ([[segue identifier] isEqualToString:@"SagaHistorialEstatus"]) {
@@ -181,6 +181,14 @@ NSString *idpaciente;
         HistorialEstatus *ViewHistorial = (HistorialEstatus *)([navController viewControllers][0]);
         ViewHistorial.idpaciente = self.txtNoPaciente.text;
     }
+    
+    if ([[segue identifier] isEqualToString:@"SagaEstatus"]) {
+        UINavigationController *navController = [segue destinationViewController];
+        Actualiza_Estatus *ViewHistorial = (Actualiza_Estatus *)([navController viewControllers][0]);
+        ViewHistorial.nopaciente = self.txtNoPaciente.text;
+    }
+    
+    
     
     
 }

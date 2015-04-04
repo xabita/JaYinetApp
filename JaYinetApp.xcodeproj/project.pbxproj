@@ -49,6 +49,9 @@
 		26DC7A281ACFCD88006E0643 /* BuscarPaciente.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A271ACFCD88006E0643 /* BuscarPaciente.m */; };
 		26DC7A2B1ACFE31F006E0643 /* HistorialEstatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A2A1ACFE31F006E0643 /* HistorialEstatus.m */; };
 		26DC7A2E1ACFE63B006E0643 /* EstatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A2D1ACFE63B006E0643 /* EstatusCell.m */; };
+		26DC7A321AD05C88006E0643 /* Actualiza_Estatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A311AD05C88006E0643 /* Actualiza_Estatus.m */; };
+		26DC7A351AD06BF8006E0643 /* ListadoPacientes.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A341AD06BF8006E0643 /* ListadoPacientes.m */; };
+		26DC7A381AD06CB9006E0643 /* ListadoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DC7A371AD06CB9006E0643 /* ListadoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,12 @@
 		26DC7A2A1ACFE31F006E0643 /* HistorialEstatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistorialEstatus.m; sourceTree = "<group>"; };
 		26DC7A2C1ACFE63B006E0643 /* EstatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstatusCell.h; sourceTree = "<group>"; };
 		26DC7A2D1ACFE63B006E0643 /* EstatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstatusCell.m; sourceTree = "<group>"; };
+		26DC7A301AD05C88006E0643 /* Actualiza_Estatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actualiza_Estatus.h; sourceTree = "<group>"; };
+		26DC7A311AD05C88006E0643 /* Actualiza_Estatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actualiza_Estatus.m; sourceTree = "<group>"; };
+		26DC7A331AD06BF8006E0643 /* ListadoPacientes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListadoPacientes.h; sourceTree = "<group>"; };
+		26DC7A341AD06BF8006E0643 /* ListadoPacientes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListadoPacientes.m; sourceTree = "<group>"; };
+		26DC7A361AD06CB9006E0643 /* ListadoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListadoCell.h; sourceTree = "<group>"; };
+		26DC7A371AD06CB9006E0643 /* ListadoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListadoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +333,12 @@
 				26DC7A2A1ACFE31F006E0643 /* HistorialEstatus.m */,
 				26DC7A2C1ACFE63B006E0643 /* EstatusCell.h */,
 				26DC7A2D1ACFE63B006E0643 /* EstatusCell.m */,
+				26DC7A301AD05C88006E0643 /* Actualiza_Estatus.h */,
+				26DC7A311AD05C88006E0643 /* Actualiza_Estatus.m */,
+				26DC7A331AD06BF8006E0643 /* ListadoPacientes.h */,
+				26DC7A341AD06BF8006E0643 /* ListadoPacientes.m */,
+				26DC7A361AD06CB9006E0643 /* ListadoCell.h */,
+				26DC7A371AD06CB9006E0643 /* ListadoCell.m */,
 			);
 			name = TrabajoSocial;
 			sourceTree = "<group>";
@@ -439,8 +454,11 @@
 				26DC7A2B1ACFE31F006E0643 /* HistorialEstatus.m in Sources */,
 				26DC7A251ACE6CC6006E0643 /* RegistroPaciente.m in Sources */,
 				26375AA41ACE2F33008BD965 /* MenuSocialController.m in Sources */,
+				26DC7A321AD05C88006E0643 /* Actualiza_Estatus.m in Sources */,
 				26D8044A1ACCD489003497F5 /* AppDelegate.m in Sources */,
+				26DC7A351AD06BF8006E0643 /* ListadoPacientes.m in Sources */,
 				26DC7A281ACFCD88006E0643 /* BuscarPaciente.m in Sources */,
+				26DC7A381AD06CB9006E0643 /* ListadoCell.m in Sources */,
 				26D805921ACD0875003497F5 /* IniciarSesionController.m in Sources */,
 				26D805BB1ACD4AD7003497F5 /* HistorialCell.m in Sources */,
 				26375AA11ACE2EA4008BD965 /* HistorialPacienteSocial.m in Sources */,

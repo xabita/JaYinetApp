@@ -8,6 +8,7 @@
 
 #import "MenuSocialController.h"
 #import "SWRevealViewController.h"
+#import <Parse/Parse.h>
 
 @interface MenuSocialController ()
 
@@ -18,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // do stuff with the user
+    } else {
+        // show the signup or login screen
+    }
     
     
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -48,6 +55,12 @@
 
 - (IBAction)btnMenu:(UIBarButtonItem *)sender {
      [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)btnCerrarSesion:(UIButton *)sender {
+    [PFUser logOut];
+    PFUser *currentUser = [PFUser currentUser];
+    
 }
 
 

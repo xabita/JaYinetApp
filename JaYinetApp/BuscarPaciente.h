@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BuscarPaciente : UIViewController
+@interface BuscarPaciente : UIViewController<UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btnMenu;
 @property (strong, nonatomic) IBOutlet UITextField *txtBuscar;

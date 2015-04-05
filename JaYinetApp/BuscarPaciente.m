@@ -11,8 +11,9 @@
 #import "SWRevealViewController.h"
 #import "HistorialEstatus.h"
 #import "Actualiza_Estatus.h"
-
+UIAlertView *alert;
 NSString *idpaciente;
+
 @interface BuscarPaciente ()
 
 @end
@@ -128,9 +129,9 @@ NSString *idpaciente;
                     }
                 }];
                 
-                PFInstallation *installation = [PFInstallation currentInstallation];
-                installation[@"user"] = [PFUser currentUser];
-                [installation saveInBackground];
+             //   PFInstallation *installation = [PFInstallation currentInstallation];
+             //   installation[@"user"] = [PFUser currentUser];
+             //   [installation saveInBackground];
                 
                 /*
                 
@@ -159,7 +160,15 @@ NSString *idpaciente;
             }
         } else {
             // Log details of the failure
+            
             NSLog(@"Error: %@ %@", error, [error userInfo]);
+            alert = [[UIAlertView alloc] initWithTitle:@"JaYinet"
+                                               message:@"El folio que ingresò no es válido"
+                                              delegate:self
+                                     cancelButtonTitle:@"Aceptar"
+                                     otherButtonTitles: nil];
+            [alert show];
+            
         }
     }];
 

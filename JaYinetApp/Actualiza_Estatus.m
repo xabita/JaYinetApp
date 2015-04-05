@@ -75,13 +75,25 @@ UIAlertView *alert;
     
     [estadoObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
+            
+            
+            PFQuery *pushQuery = [PFInstallation query];
+                        [pushQuery whereKey:@"deviceType" equalTo:@"ios"];
+            
+                       // Send push notification to query
+                       [PFPush sendPushMessageToQueryInBackground:pushQuery
+                        withMessage:self.txtEstatus.text];
+            
+            
+            
+            
             NSLog(@"Se actualizó el estado del paciente correctamente. %@", estadoObject.objectId);
             
             alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
                                                message:@"Se actualizó el estado del paciente correctamente."
                                               delegate:self
-                                     cancelButtonTitle:@"Cancelar"
-                                     otherButtonTitles: @"Aceptar", nil];
+                                     cancelButtonTitle:@"Aceptar"
+                                     otherButtonTitles: nil];
             [alert show];
             
             // Create our Installation query
@@ -94,13 +106,13 @@ UIAlertView *alert;
             NSLog(@"USERRRRR IDDD :  %@",identificador);
             
             PFQuery *queryU = [PFQuery queryWithClassName:@"User"];
-            [query whereKey:@"id_paciente" equalTo:self.txtNoaciente.text];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            [queryU whereKey:@"id_paciente" equalTo:self.txtNoaciente.text];
+            [queryU findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 if (!error) {
                     // The find succeeded.
                     //NSLog(@"Successfully retrieved %d scores.", objects.count);
                     for (PFObject *object in objects) {
-                        NSLog(@"USERRRRR:  %@", object.objectId);
+                      //  NSLog(@"USERRRRR:  %@", object.objectId);
                         // NSLog(@"IDPacienteVARRRR:  %@", idpaciente);
                         
                         NSString *iduser=object.objectId;
@@ -131,10 +143,7 @@ UIAlertView *alert;
                                 NSLog(@"Error: %@ %@", errorins, [errorins userInfo]);
                             }
                         }];
-                        
-                        
-                        
-                        
+                
                     }
                 } else {
                     // Log details of the failure

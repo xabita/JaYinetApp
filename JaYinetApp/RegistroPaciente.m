@@ -9,6 +9,8 @@
 #import "RegistroPaciente.h"
 #import <Parse/Parse.h>
 NSString *idpac;
+UIAlertView *alert;
+
 @interface RegistroPaciente ()
 
 @end
@@ -26,15 +28,7 @@ NSString *idpac;
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)btnGuardar:(UIButton *)sender {
     PFObject *pacienteObject = [PFObject objectWithClassName:@"pacientes"];
@@ -44,13 +38,12 @@ NSString *idpac;
     pacienteObject[@"domicilio"] = self.txtDomicilio.text;
     [pacienteObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
-            
-            
             // The object has been saved.
             idpac=pacienteObject.objectId;
             NSLog(@"Guardando idddd %@", idpac);
-            
-            
+            NSString *mensaje = [NSString stringWithFormat:@"%@ %@", @"El folio del paciente registrado es: ", idpac];
+
+          
             /*  PFObject *estadoObject = [PFObject objectWithClassName:@"historial"];
              estadoObject[@"desc_estado"] = self.txtEstado.text;
              // Add a relation between the Post and Comment
@@ -71,13 +64,10 @@ NSString *idpac;
                 }
             }];
             
-            
             PFObject *responsableObject = [PFObject objectWithClassName:@"responsables"];
-            
             responsableObject[@"nom_responsable"] = self.txtResponsable.text;
             responsableObject[@"no_movil"] = self.txtTelefono.text;
             responsableObject[@"id_pac"] = idpac;
-            
             [responsableObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (succeeded) {
                     NSLog(@"responsables guardado %@", responsableObject.objectId);
@@ -85,9 +75,29 @@ NSString *idpac;
                     // There was a problem, check error.description
                 }
             }];
+            
+            
+            
+            alert = [[UIAlertView alloc] initWithTitle:@"JaYinet"
+                                               message:mensaje
+                                              delegate:self
+                                     cancelButtonTitle:@"Aceptar"
+                                     otherButtonTitles: nil];
+            [alert show];
+            
+            
         
         } else {
-            // There was a problem, check error.description
+            NSString *mensaje = [NSString stringWithFormat:@"%@", @"Ocurrio un Error al realizar el registro intentelo de nuevo. "];
+            alert = [[UIAlertView alloc] initWithTitle:@"JaYinet"
+                                               message:mensaje
+                                              delegate:self
+                                     cancelButtonTitle:@"Aceptar"
+                                     otherButtonTitles: nil];
+            [alert show];
+            
+
+            
         }
     }];
     
@@ -110,11 +120,7 @@ NSString *idpac;
 }
 
 
-
-
-
-
-
-
-
+- (IBAction)btnMenu:(UIBarButtonItem *)sender {
+      [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

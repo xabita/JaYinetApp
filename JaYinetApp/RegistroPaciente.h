@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegistroPaciente : UIViewController
+@interface RegistroPaciente : UIViewController<UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *txtNombre;
 @property (strong, nonatomic) IBOutlet UITextField *txtPaterno;
 @property (strong, nonatomic) IBOutlet UITextField *txtMaterno;
@@ -21,5 +21,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnGuardar;
 - (IBAction)btnGuardar:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btnMenu;
+- (IBAction)btnMenu:(UIBarButtonItem *)sender;
 
 @end

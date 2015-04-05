@@ -11,7 +11,7 @@
 #import "HistorialPacienteController.h"
 
 NSString *idpaciente;
-
+UIAlertView *alert;
 
 @interface ConsultarController ()
 
@@ -52,9 +52,6 @@ NSString *idpaciente;
 */
 
 - (IBAction)btnBuscar:(id)sender {
-    
-    
-    
     PFQuery *query = [PFQuery queryWithClassName:@"pacientes"];
     [query whereKey:@"objectId" equalTo:self.txtNoBuscar.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -85,19 +82,42 @@ NSString *idpaciente;
                             NSLog(@"Estado-..---%@", objectH);
                             self.txtEstado.text= objectH[@"desc_estado"];
                         }
+                        // Associate the device with a user
+                        PFUser *user = [PFUser user];
+                        user.username = self.txtNoPaciente.text;
+                        user.password = self.txtNoPaciente.text;
+                        user[@"id_paciente"] = self.txtNoPaciente.text;
+                        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                            if (!error) {
+                                // Hooray! Let them use the app now.
+                                PFInstallation *installation = [PFInstallation currentInstallation];
+                                installation[@"user"] = [PFUser currentUser];
+                              //  installation[@"channels"] = self.txtNoPaciente.text;
+                                [installation saveInBackground];
+                                
+                            } else {
+                                NSString *errorString = [error userInfo][@"error"];
+                                // Show the errorString somewhere and let the user try again.
+                            }
+                        }];
+                        
                     } else {
                         // Log details of the failure
                         NSLog(@"Error: %@ %@", errorh, [errorh userInfo]);
                     }
                 }];
                 
-                
-                
-                
             }
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
+            alert = [[UIAlertView alloc] initWithTitle:@"JaYinet"
+                                               message:@"El folio que ingresò no es válido"
+                                              delegate:self
+                                     cancelButtonTitle:@"Aceptar"
+                                     otherButtonTitles: nil];
+            [alert show];
+            
         }
     }];
     
@@ -105,13 +125,6 @@ NSString *idpaciente;
 
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
- /*   NSLog(@"segueRespaciente retrieved %@", @"saga");
-    if ([[segue identifier] isEqualToString:@"segueRespaciente"]) {
-        ViewEstado *segundoView = [segue destinationViewController];
-        segundoView.nopaciente = self.txtRespaciente.text;
-    }*/
-    
     if ([[segue identifier] isEqualToString:@"SegueHistorialN"]) {
         UINavigationController *navController = [segue destinationViewController];
         HistorialPacienteController *ViewHistorial = (HistorialPacienteController *)([navController viewControllers][0]);

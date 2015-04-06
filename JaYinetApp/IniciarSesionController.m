@@ -17,8 +17,6 @@ UIAlertView     *alert;
 
 @end
 
-
-
 @implementation IniciarSesionController
 
 - (void)viewDidLoad {
@@ -64,13 +62,12 @@ UIAlertView     *alert;
                                             PFInstallation *installation = [PFInstallation currentInstallation];
                                             installation[@"user"] = [PFUser currentUser];
                                             [installation saveInBackground];
-                                            
                                             [self performSegueWithIdentifier:@"SessionSegue" sender:self];
                                             
                                             
                                         } else {
                                             
-                                            alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
+                                            alert = [[UIAlertView alloc] initWithTitle:@"JaYinet"
                                                                                message:@"Error de inicio de sesion"
                                                                               delegate:self
                                                                      cancelButtonTitle:@"Cancelar"

@@ -92,12 +92,35 @@ UIAlertView *alert;
             [alert show];
             
             
+            
+            // Create our Installation query
+            PFQuery *pushQuery = [PFInstallation query];
+            [pushQuery whereKey:@"deviceToken" equalTo:@"342262252f04d4af558fab2b666684899c0d2caaf99a55b3532e950814254b36"];
+            
+            // Send push notification to query
+            PFPush *push = [[PFPush alloc] init];
+            [push setQuery:pushQuery]; // Set our Installation query
+            [push setMessage:self.txtEstatus.text];
+            [push sendPushInBackground];
+            
+            
+         /*   PFQuery *pushQuery = [PFInstallation query];
+            [pushQuery whereKey:@"injuryReports" equalTo:YES];
+            
+            // Send push notification to query
+            PFPush *push = [[PFPush alloc] init];
+            [push setQuery:pushQuery]; // Set our Installation query
+            [push setMessage:@"Willie Hayes injured by own pop fly."];
+            [push sendPushInBackground];
+            */
+            
+            
             PFQuery *query = [PFInstallation query];
             [query whereKey:@"id_paciente" equalTo:self.txtNoaciente.text ];
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 if (!error) {
                     for (PFObject *object in objects) {
-                        NSString *iduser=object.objectId;
+                      //  NSString *iduser=object.objectId;
                         NSString *token= object[@"deviceToken"];
                         
                         NSLog(@"TOKENNNNN:  %@", token);
@@ -172,15 +195,7 @@ UIAlertView *alert;
             
             
             /*
-            // Create our Installation query
-            PFQuery *pushQuery = [PFInstallation query];
-            [pushQuery whereKey:@"id_paciente" equalTo:self.txtNoaciente.text];
-            
-            // Send push notification to query
-            PFPush *push = [[PFPush alloc] init];
-            [push setQuery:pushQuery]; // Set our Installation query
-            [push setMessage:@"Willie Hayes injured by own pop fly."];
-            [push sendPushInBackground];
+           
             
             
            

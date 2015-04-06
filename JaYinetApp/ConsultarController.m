@@ -52,19 +52,30 @@ UIAlertView *alert;
 */
 
 - (IBAction)btnBuscar:(id)sender {
+ /*   [PFUser logInWithUsernameInBackground:self.txtNoBuscar.text password:self.txtNoBuscar.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            PFInstallation *installation = [PFInstallation currentInstallation];
+                                            installation[@"user"] = [PFUser currentUser];
+                                            [installation saveInBackground];
+                                        }
+                                        else {
+                                            alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
+                                                                               message:@"Error de inicio de sesion"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"Cancelar"
+                                                                     otherButtonTitles: nil];
+                                            [alert show];
+                                        }
+                                    }];*/
+    
     PFQuery *query = [PFQuery queryWithClassName:@"pacientes"];
     [query whereKey:@"objectId" equalTo:self.txtNoBuscar.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
-            //NSLog(@"Successfully retrieved %d scores.", objects.count);
-            // Do something with the found objects
             for (PFObject *object in objects) {
-                
                 idpaciente=object.objectId;
-                
-                NSLog(@"IDPaciente:  %@", object.objectId);
-                // NSLog(@"IDPacienteVARRRR:  %@", idpaciente);
                 self.txtNoPaciente.text= object.objectId;
                 self.txtNombre.text= object[@"nom_paciente"];
                 self.txtPaterno.text= object[@"ap_paterno"];
@@ -82,62 +93,41 @@ UIAlertView *alert;
                             NSLog(@"Estado-..---%@", objectH);
                             self.txtEstado.text= objectH[@"desc_estado"];
                         }
-                        // Associate the device with a user
-                        PFUser *user = [PFUser user];
-                        user.username = self.txtNoPaciente.text;
-                        user.password = self.txtNoPaciente.text;
-                        user[@"id_paciente"] = self.txtNoPaciente.text;
-                        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                            if (!error) {
-                                // Hooray! Let them use the app now.
-                                PFInstallation *installation = [PFInstallation currentInstallation];
-                                installation[@"user"] = [PFUser currentUser];
-                                installation[@"id_paciente"] = self.txtNoPaciente.text;
-                               // [installation addUniqueObject:self.txtNoPaciente.text forKey:@"channels"];
-                              //  installation[@"channels"] = self.txtNoPaciente.text;
-                                [installation saveInBackground];
-                                
-                                 NSLog(@"InstallationID%@    ----   %@", installation.objectId, installation[@"deviceToken"]);
-                                PFObject *responsableObject = [PFObject objectWithClassName:@"responsables_token"];
-                                responsableObject[@"id_user"] = [PFUser currentUser];
-                                responsableObject[@"id_installation"] = installation.objectId;
-                                responsableObject[@"device_token"] = installation[@"deviceToken"];
-                                responsableObject[@"id_paciente"] = self.txtNoPaciente.text;
-                                
-                                [responsableObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                                    if (succeeded) {
-                                        NSLog(@"responsablestoken guardado %@", responsableObject.objectId);
-                                    } else {
-                                        // There was a problem, check error.description
-                                    }
-                                }];
-                                
-                                
-                            } else {
-                                NSString *errorString = [error userInfo][@"error"];
-                                // Show the errorString somewhere and let the user try again.
-                            }
-                        }];
-                        
                     } else {
                         // Log details of the failure
                         NSLog(@"Error: %@ %@", errorh, [errorh userInfo]);
                     }
                 }];
                 
+                
+                PFUser *user = [PFUser user];
+                user.username = self.txtNoPaciente.text;
+                user.password = self.txtNoPaciente.text;
+                user[@"id_paciente"] = self.txtNoPaciente.text;
+                
+                [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (!error) {
+                        
+                        
+                        // Hooray! Let them use the app now.
+                        PFInstallation *installation = [PFInstallation currentInstallation];
+                        installation[@"user"] = [PFUser currentUser];
+                        [installation saveInBackground];
+                        
+                        
+                    } else {
+                        NSString *errorString = [error userInfo][@"error"];
+                        // Show the errorString somewhere and let the user try again.
+                    }
+                }];
             }
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
-            alert = [[UIAlertView alloc] initWithTitle:@"JaYinet"
-                                               message:@"El folio que ingresò no es válido"
-                                              delegate:self
-                                     cancelButtonTitle:@"Aceptar"
-                                     otherButtonTitles: nil];
-            [alert show];
-            
         }
     }];
+    
+    
     
 }
 

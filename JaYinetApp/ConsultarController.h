@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-
+#import "AppDelegate.h"
 @interface ConsultarController : UIViewController<UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btnMenu;
 @property (strong, nonatomic) IBOutlet UITextField *txtNoBuscar;

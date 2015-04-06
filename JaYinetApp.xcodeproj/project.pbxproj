@@ -10,6 +10,9 @@
 		26375A9E1ACE2852008BD965 /* ir.png in Resources */ = {isa = PBXBuildFile; fileRef = 26375A9D1ACE2852008BD965 /* ir.png */; };
 		26375AA11ACE2EA4008BD965 /* HistorialPacienteSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375AA01ACE2EA4008BD965 /* HistorialPacienteSocial.m */; };
 		26375AA41ACE2F33008BD965 /* MenuSocialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26375AA31ACE2F33008BD965 /* MenuSocialController.m */; };
+		26BA10EC1AD2659100CA3357 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BA10EB1AD2659100CA3357 /* Foundation.framework */; };
+		26BA10EE1AD265A600CA3357 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BA10ED1AD265A600CA3357 /* UIKit.framework */; };
+		26BA10F01AD265F600CA3357 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BA10EF1AD265F600CA3357 /* libstdc++.6.dylib */; };
 		26D804471ACCD489003497F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D804461ACCD489003497F5 /* main.m */; };
 		26D8044A1ACCD489003497F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D804491ACCD489003497F5 /* AppDelegate.m */; };
 		26D8044D1ACCD489003497F5 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D8044C1ACCD489003497F5 /* HomeController.m */; };
@@ -70,6 +73,9 @@
 		26375AA01ACE2EA4008BD965 /* HistorialPacienteSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistorialPacienteSocial.m; sourceTree = "<group>"; };
 		26375AA21ACE2F33008BD965 /* MenuSocialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSocialController.h; sourceTree = "<group>"; };
 		26375AA31ACE2F33008BD965 /* MenuSocialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSocialController.m; sourceTree = "<group>"; };
+		26BA10EB1AD2659100CA3357 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		26BA10ED1AD265A600CA3357 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		26BA10EF1AD265F600CA3357 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		26D804411ACCD489003497F5 /* JaYinetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JaYinetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D804451ACCD489003497F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D804461ACCD489003497F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BA10F01AD265F600CA3357 /* libstdc++.6.dylib in Frameworks */,
+				26BA10EE1AD265A600CA3357 /* UIKit.framework in Frameworks */,
+				26BA10EC1AD2659100CA3357 /* Foundation.framework in Frameworks */,
 				26D805B21ACD0AC6003497F5 /* libsqlite3.dylib in Frameworks */,
 				26D805B01ACD0AB8003497F5 /* libz.dylib in Frameworks */,
 				26D805AE1ACD0AAE003497F5 /* SystemConfiguration.framework in Frameworks */,
@@ -170,6 +179,9 @@
 		26D804381ACCD489003497F5 = {
 			isa = PBXGroup;
 			children = (
+				26BA10EF1AD265F600CA3357 /* libstdc++.6.dylib */,
+				26BA10ED1AD265A600CA3357 /* UIKit.framework */,
+				26BA10EB1AD2659100CA3357 /* Foundation.framework */,
 				26D804431ACCD489003497F5 /* JaYinetApp */,
 				26D8045D1ACCD489003497F5 /* JaYinetAppTests */,
 				26D804421ACCD489003497F5 /* Products */,
@@ -590,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Elizabeth Martínez Gómez (N2882R6L22)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JaYinetApp",
@@ -597,6 +610,7 @@
 				INFOPLIST_FILE = JaYinetApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8745e3c7-4e41-4196-afed-7aad03a6387d";
 			};
 			name = Debug;
 		};
@@ -604,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Elizabeth Martínez Gómez (N2882R6L22)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JaYinetApp",
@@ -611,6 +626,7 @@
 				INFOPLIST_FILE = JaYinetApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8745e3c7-4e41-4196-afed-7aad03a6387d";
 			};
 			name = Release;
 		};

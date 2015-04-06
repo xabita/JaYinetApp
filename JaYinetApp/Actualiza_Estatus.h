@@ -11,7 +11,6 @@
 @interface Actualiza_Estatus : UIViewController <UIAlertViewDelegate>
 
 @property (strong, nonatomic) NSString *nopaciente;
-
 @property (strong, nonatomic) IBOutlet UITextField *txtNoaciente;
 @property (strong, nonatomic) IBOutlet UITextField *txtNombre;
 @property (strong, nonatomic) IBOutlet UITextField *txtCama;

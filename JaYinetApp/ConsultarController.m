@@ -92,8 +92,26 @@ UIAlertView *alert;
                                 // Hooray! Let them use the app now.
                                 PFInstallation *installation = [PFInstallation currentInstallation];
                                 installation[@"user"] = [PFUser currentUser];
+                                installation[@"id_paciente"] = self.txtNoPaciente.text;
+                               // [installation addUniqueObject:self.txtNoPaciente.text forKey:@"channels"];
                               //  installation[@"channels"] = self.txtNoPaciente.text;
                                 [installation saveInBackground];
+                                
+                                 NSLog(@"InstallationID%@    ----   %@", installation.objectId, installation[@"deviceToken"]);
+                                PFObject *responsableObject = [PFObject objectWithClassName:@"responsables_token"];
+                                responsableObject[@"id_user"] = [PFUser currentUser];
+                                responsableObject[@"id_installation"] = installation.objectId;
+                                responsableObject[@"device_token"] = installation[@"deviceToken"];
+                                responsableObject[@"id_paciente"] = self.txtNoPaciente.text;
+                                
+                                [responsableObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                    if (succeeded) {
+                                        NSLog(@"responsablestoken guardado %@", responsableObject.objectId);
+                                    } else {
+                                        // There was a problem, check error.description
+                                    }
+                                }];
+                                
                                 
                             } else {
                                 NSString *errorString = [error userInfo][@"error"];

@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.title=@"LISTADO DE PACIENTES";
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -90,8 +91,9 @@
         }
         
         // Configure the cell
-        cell.lblNumero.text = [object objectForKey:@"nom_paciente"];
-        cell.lblNombre.text = [object objectForKey:@"ap_paterno"];
+        cell.lblNumero.text = object.objectId;
+        NSString *nombreCompleto = [NSString stringWithFormat:@"%@ %@ %@", [object objectForKey:@"nom_paciente"], [object objectForKey:@"ap_paterno"], [object objectForKey:@"ap_materno"]];
+        cell.lblNombre.text = nombreCompleto;
         return cell;
     }
     

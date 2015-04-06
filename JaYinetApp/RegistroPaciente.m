@@ -31,6 +31,7 @@ UIAlertView *alert;
 
 
 - (IBAction)btnGuardar:(UIButton *)sender {
+   
     PFObject *pacienteObject = [PFObject objectWithClassName:@"pacientes"];
     pacienteObject[@"nom_paciente"] = self.txtNombre.text;
     pacienteObject[@"ap_paterno"] = self.txtPaterno.text;
@@ -42,13 +43,6 @@ UIAlertView *alert;
             idpac=pacienteObject.objectId;
             NSLog(@"Guardando idddd %@", idpac);
             NSString *mensaje = [NSString stringWithFormat:@"%@ %@", @"El folio del paciente registrado es: ", idpac];
-
-          
-            /*  PFObject *estadoObject = [PFObject objectWithClassName:@"historial"];
-             estadoObject[@"desc_estado"] = self.txtEstado.text;
-             // Add a relation between the Post and Comment
-             // estadoObject[@"idpaciente"] = pacienteObject;
-             estadoObject[@"id_pac"] =  idpac;*/
             
             PFObject *estadoObject = [PFObject objectWithClassName:@"historial"];
             estadoObject[@"desc_estado"] = self.txtEstado.text;
@@ -68,9 +62,21 @@ UIAlertView *alert;
             responsableObject[@"nom_responsable"] = self.txtResponsable.text;
             responsableObject[@"no_movil"] = self.txtTelefono.text;
             responsableObject[@"id_pac"] = idpac;
+            
             [responsableObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (succeeded) {
                     NSLog(@"responsables guardado %@", responsableObject.objectId);
+                    self.txtNombre.text=NULL;
+                    self.txtPaterno.text=NULL;
+                    self.txtMaterno.text=NULL;
+                    self.txtDomicilio.text=NULL;
+                    self.txtEstado.text=NULL;
+                    self.txtCama.text=NULL;
+                    self.txtArea.text=NULL;
+                    self.txtResponsable.text=NULL;
+                    self.txtTelefono.text=NULL;
+    
+                    
                 } else {
                     // There was a problem, check error.description
                 }
@@ -85,8 +91,6 @@ UIAlertView *alert;
                                      otherButtonTitles: nil];
             [alert show];
             
-            
-        
         } else {
             NSString *mensaje = [NSString stringWithFormat:@"%@", @"Ocurrio un Error al realizar el registro intentelo de nuevo. "];
             alert = [[UIAlertView alloc] initWithTitle:@"JaYinet"
@@ -95,23 +99,9 @@ UIAlertView *alert;
                                      cancelButtonTitle:@"Aceptar"
                                      otherButtonTitles: nil];
             [alert show];
-            
-
-            
+            // There was a problem, check error.description
         }
-    }];
-    
-    self.txtNombre.text=NULL;
-    self.txtPaterno.text=NULL;
-    self.txtMaterno.text=NULL;
-    self.txtDomicilio.text=NULL;
-    self.txtEstado.text=NULL;
-    self.txtCama.text=NULL;
-    self.txtArea.text=NULL;
-    self.txtResponsable.text=NULL;
-    self.txtTelefono.text=NULL;
-    
-    
+    }];     
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

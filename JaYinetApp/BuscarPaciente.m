@@ -52,64 +52,20 @@ NSString *idpaciente;
 */
 
 - (IBAction)Buscar:(UIButton *)sender {
-    
-    
-  /*  [PFUser logInWithUsernameInBackground:self.txtRespaciente.text password:self.txtRespaciente.text
-       block:^(PFUser *user, NSError *error) {
-           if (user) {
-               NSLog(@"logueadooooo");
-               // Associate the device with a user
-               PFInstallation *installation = [PFInstallation currentInstallation];
-               installation[@"user"] = [PFUser currentUser];
-               [installation saveInBackground];
-           }
-           else {
-                    alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
-                    message:@"Error de inicio de sesion"
-                    delegate:self
-                    cancelButtonTitle:@"Cancelar"
-                    otherButtonTitles: nil];
-                    [alert show];
-                  }
-      }];*/
-    
-    
-    
-    //crear viecontroller de iniccio de sesion de responsables
-    
-    
-    /*
-     PFUser *currentUser = [PFUser currentUser];
-     if (currentUser) {
-     NSLog(@"Usuario Actual :: %@", currentUser);
-     } else {
-     // show the signup or login screen
-     }
-     
-     // Associate the device with a user
-     PFInstallation *installation = [PFInstallation currentInstallation];
-     installation[@"user"] = [PFUser currentUser];
-     [installation saveInBackground];
-     
-     */
-    
     PFQuery *query = [PFQuery queryWithClassName:@"pacientes"];
     [query whereKey:@"objectId" equalTo:self.txtBuscar.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
-            //NSLog(@"Successfully retrieved %d scores.", objects.count);
-            // Do something with the found objects
             for (PFObject *object in objects) {
-                
                 idpaciente=object.objectId;
-                
                 NSLog(@"IDPaciente:  %@", object.objectId);
                 // NSLog(@"IDPacienteVARRRR:  %@", idpaciente);
                 self.txtNoPaciente.text= object.objectId;
                 self.txtNombre.text= object[@"nom_paciente"];
                 self.txtPaterno.text= object[@"ap_paterno"];
                 self.txtMaterno.text= object[@"ap_materno"];
+                self.txtDomicilio.text=object[@"domicilio"];
                 
                 PFQuery *queryE = [PFQuery queryWithClassName:@"historial"];
                 [queryE whereKey:@"id_pac" equalTo:idpaciente];
@@ -119,7 +75,6 @@ NSString *idpaciente;
                         NSLog(@"Successfully retrieved %d scores.", objectsHist.count);
                         // Do something with the found objects
                         for (PFObject *objectH in objectsHist) {
-                            NSLog(@"OBjHistorial....%@", objectH.objectId);
                             NSLog(@"Estado-..---%@", objectH);
                             self.txtEstado.text= objectH[@"desc_estado"];
                         }
@@ -128,39 +83,9 @@ NSString *idpaciente;
                         NSLog(@"Error: %@ %@", errorh, [errorh userInfo]);
                     }
                 }];
-                
-             //   PFInstallation *installation = [PFInstallation currentInstallation];
-             //   installation[@"user"] = [PFUser currentUser];
-             //   [installation saveInBackground];
-                
-                /*
-                
-                PFUser *user = [PFUser user];
-                user.username = self.txtRespaciente.text;
-                user.password = self.txtRespaciente.text;
-                
-                // other fields can be set just like with PFObject
-                user[@"id_paciente"] = self.txtRespaciente.text;
-                
-                [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                    if (!error) {
-                        // Hooray! Let them use the app now.
-                       
-                        
-                        
-                    } else {
-                        NSString *errorString = [error userInfo][@"error"];
-                        // Show the errorString somewhere and let the user try again.
-                    }
-                }];
-                
-                */
-                
-                
             }
         } else {
             // Log details of the failure
-            
             NSLog(@"Error: %@ %@", error, [error userInfo]);
             alert = [[UIAlertView alloc] initWithTitle:@"JaYinet"
                                                message:@"El folio que ingresò no es válido"
@@ -168,12 +93,8 @@ NSString *idpaciente;
                                      cancelButtonTitle:@"Aceptar"
                                      otherButtonTitles: nil];
             [alert show];
-            
         }
     }];
-
-    
-    
 }
 
 

@@ -92,16 +92,13 @@ UIAlertView *alert;
             [alert show];
             
             
-            
-            // Create our Installation query
             PFQuery *pushQuery = [PFInstallation query];
-            [pushQuery whereKey:@"deviceToken" equalTo:@"342262252f04d4af558fab2b666684899c0d2caaf99a55b3532e950814254b36"];
+            [pushQuery whereKey:@"deviceType" equalTo:@"ios"];
             
             // Send push notification to query
-            PFPush *push = [[PFPush alloc] init];
-            [push setQuery:pushQuery]; // Set our Installation query
-            [push setMessage:self.txtEstatus.text];
-            [push sendPushInBackground];
+            [PFPush sendPushMessageToQueryInBackground:pushQuery
+                                           withMessage:self.txtEstatus.text];
+
             
             
          /*   PFQuery *pushQuery = [PFInstallation query];
@@ -114,28 +111,7 @@ UIAlertView *alert;
             [push sendPushInBackground];
             */
             
-            
-            PFQuery *query = [PFInstallation query];
-            [query whereKey:@"id_paciente" equalTo:self.txtNoaciente.text ];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (!error) {
-                    for (PFObject *object in objects) {
-                      //  NSString *iduser=object.objectId;
-                        NSString *token= object[@"deviceToken"];
-                        
-                        NSLog(@"TOKENNNNN:  %@", token);
-                        
-                    }
-                } else {
-                    // Log details of the failure
-                    NSLog(@"Error: %@ %@", error, [error userInfo]);
-                }
-            }];
-            
-            
-            
-          
-            /*
+                        /*
             PFQuery *queryU = [PFQuery queryWithClassName:@"responsables_token"];
             [queryU whereKey:@"id_paciente" equalTo:self.txtNoaciente.text ];
             [queryU findObjectsInBackgroundWithBlock:^(NSArray *objectsU, NSError *error) {

@@ -49,6 +49,8 @@ NSString *identificadorPaciente;
 - (void)viewDidLoad {
     [super viewDidLoad];
        identificadorPaciente =_idpaciente;
+       self.title=@"Historial paciente";
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

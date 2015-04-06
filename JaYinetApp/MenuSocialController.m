@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title=@"Menu";
+    
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         // do stuff with the user
@@ -60,6 +62,8 @@
 - (IBAction)btnCerrarSesion:(UIButton *)sender {
     [PFUser logOut];
     PFUser *currentUser = [PFUser currentUser];
+    [self performSegueWithIdentifier:@"sagaLogout" sender:self];
+    
     
 }
 

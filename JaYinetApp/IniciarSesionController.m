@@ -23,7 +23,7 @@ UIAlertView     *alert;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title=@"Iniciar Sesion";
+    self.title=@"Login";
     
     // Do any additional setup after loading the view.
     

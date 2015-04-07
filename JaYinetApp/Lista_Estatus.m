@@ -30,7 +30,7 @@ UIAlertView *alert;
     
     identificadorPaciente =_nopaciente;
     
-    NSLog(@"DETALLEEEE. %@", identificadorPaciente);
+   // NSLog(@"DETALLEEEE. %@", identificadorPaciente);
     
     self.txtNoPaciente.text = _nopaciente;
     

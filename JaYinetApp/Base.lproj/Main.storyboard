@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEa-d9-7q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="-1118"/>
+            <point key="canvasLocation" x="1257" y="-1152"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="8tE-4l-JCp">
@@ -520,6 +520,7 @@
                                 <connections>
                                     <outlet property="lblNombre" destination="Xiu-OT-VHY" id="PmB-K6-zaJ"/>
                                     <outlet property="lblNumero" destination="d1q-Nt-aF4" id="roS-se-roE"/>
+                                    <segue destination="zfu-b3-a5M" kind="modal" identifier="sagaDetalle" id="6uo-W8-8lt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -555,6 +556,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhZ-vx-RJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2659" y="1222"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mcV-IP-nD6">
+            <objects>
+                <navigationController id="zfu-b3-a5M" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQZ-5r-sba">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aL6-G0-Cy2" kind="relationship" relationship="rootViewController" id="zgb-cm-m0t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0j-Gd-gLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="1957"/>
+        </scene>
+        <!--Lista Estatus-->
+        <scene sceneID="ZrX-KO-Npg">
+            <objects>
+                <viewController id="aL6-G0-Cy2" customClass="Lista_Estatus" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wFP-dO-abn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="estetoscopioM.jpg" id="1rc-sA-zpm">
+                                <rect key="frame" x="0.0" y="62" width="320" height="506"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.60000002384185791" contentMode="scaleToFill" id="Jpx-ZA-C8x">
+                                <rect key="frame" x="23" y="301" width="262" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.87843137250000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" minimumFontSize="17" id="L2r-X4-NLU">
+                                <rect key="frame" x="23" y="155" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.87843137250000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No. Cama" minimumFontSize="17" id="Nbj-RC-MbW">
+                                <rect key="frame" x="23" y="193" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.87843137250000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Area" minimumFontSize="17" id="se6-aP-ChN">
+                                <rect key="frame" x="23" y="231" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.87843137250000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Folio paciente" minimumFontSize="17" id="dc8-eW-Fii">
+                                <rect key="frame" x="23" y="109" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.87843137250000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dsA-AT-hLL">
+                                <rect key="frame" x="62" y="430" width="165" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.638967803" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGuardar:" destination="aL6-G0-Cy2" eventType="touchUpInside" id="szw-fp-z3j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kfn-sm-yAM">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="P6V-m7-LH1">
+                            <connections>
+                                <action selector="btnMenu1:" destination="aL6-G0-Cy2" id="jAE-xo-Wp1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnGuardar" destination="dsA-AT-hLL" id="7zY-VY-Im0"/>
+                        <outlet property="btnMenu1" destination="P6V-m7-LH1" id="CEu-46-Zbe"/>
+                        <outlet property="txtArea" destination="se6-aP-ChN" id="s3Y-Yt-Lk4"/>
+                        <outlet property="txtCama" destination="Nbj-RC-MbW" id="2Ai-Mq-x0s"/>
+                        <outlet property="txtEstatus" destination="Jpx-ZA-C8x" id="lWP-V5-2pP"/>
+                        <outlet property="txtNoPaciente" destination="dc8-eW-Fii" id="Ep3-KN-yxx"/>
+                        <outlet property="txtNombre" destination="L2r-X4-NLU" id="7ky-9U-MgB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVc-Gu-gaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3067" y="1948"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ugr-IS-lzu">
@@ -1085,6 +1186,13 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="505"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" text="JaYinet permite al área de Trabajo Social de un Hospital llevar el control del estado de salud de cada paciente." textAlignment="justified" id="6GX-co-WWv">
+                                <rect key="frame" x="41" y="266" width="256" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JaYinet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OcU-Et-GfL">
                                 <rect key="frame" x="136" y="159" width="124" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1092,17 +1200,11 @@
                                 <color key="textColor" red="0.638967803" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" text="JaYinet le permite estar cerca de sus seres queridos que se encuentran en un hospital." textAlignment="justified" id="fS6-at-Vcp">
-                                <rect key="frame" x="41" y="350" width="256" height="70"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" textAlignment="justified" id="fS6-at-Vcp">
+                                <rect key="frame" x="41" y="362" width="256" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" text="Usted recibirá notificaciones cada vez que Trabajo Social actualice el estado actual del paciente." textAlignment="justified" id="nKg-oM-VFW">
-                                <rect key="frame" x="41" y="421" width="256" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Al actualizar el estado de cada paciente el Responsable recibirá notificaciones y así estar informado acerca de la salud del paciente</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1118,7 +1220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaJ-94-v3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="1112"/>
+            <point key="canvasLocation" x="1377" y="1078"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fkq-6t-Xi3">
@@ -1135,7 +1237,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Us-JC-nQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="1112"/>
+            <point key="canvasLocation" x="951" y="1078"/>
         </scene>
     </scenes>
     <resources>

@@ -9,8 +9,7 @@
 #import "ListadoPacientes.h"
 #import <Parse/Parse.h>
 #import "ListadoCell.h"
-
-
+#import "Lista_Estatus.h"
 
 @interface ListadoPacientes ()
 
@@ -94,13 +93,29 @@
         cell.lblNumero.text = object.objectId;
         NSString *nombreCompleto = [NSString stringWithFormat:@"%@ %@ %@", [object objectForKey:@"nom_paciente"], [object objectForKey:@"ap_paterno"], [object objectForKey:@"ap_materno"]];
         cell.lblNombre.text = nombreCompleto;
-        return cell;
+        return cell;        
     }
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"Detalle");
     
+    if ([segue.identifier isEqualToString:@"sagaDetalle"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        UINavigationController *navController = [segue destinationViewController];
+        Lista_Estatus *detallePac = (Lista_Estatus *)([navController viewControllers][0]);
+        
+        PFObject *object = [self.objects objectAtIndex:indexPath.row];
+        detallePac.txtNoPaciente.text = [object objectForKey:@"nom_paciente"];
+        detallePac.nopaciente = object.objectId;
+          NSLog(@"Detalle %@", object.objectId);
+
+    }
+}
 
 
 - (IBAction)btnMenu:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
- 
 }
 @end

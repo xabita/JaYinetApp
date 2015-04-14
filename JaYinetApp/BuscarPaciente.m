@@ -72,7 +72,7 @@ NSString *idpaciente;
                 [queryE findObjectsInBackgroundWithBlock:^(NSArray *objectsHist, NSError *errorh) {
                     if (!errorh) {
                         // The find succeeded.
-                        NSLog(@"Successfully retrieved %d scores.", objectsHist.count);
+                        // NSLog(@"Successfully retrieved %d scores.", objectsHist.count);
                         // Do something with the found objects
                         for (PFObject *objectH in objectsHist) {
                             NSLog(@"Estado-..---%@", objectH);

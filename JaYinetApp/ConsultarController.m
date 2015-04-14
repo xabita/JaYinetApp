@@ -52,22 +52,6 @@ UIAlertView *alert;
 */
 
 - (IBAction)btnBuscar:(id)sender {
- /*   [PFUser logInWithUsernameInBackground:self.txtNoBuscar.text password:self.txtNoBuscar.text
-                                    block:^(PFUser *user, NSError *error) {
-                                        if (user) {
-                                            PFInstallation *installation = [PFInstallation currentInstallation];
-                                            installation[@"user"] = [PFUser currentUser];
-                                            [installation saveInBackground];
-                                        }
-                                        else {
-                                            alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
-                                                                               message:@"Error de inicio de sesion"
-                                                                              delegate:self
-                                                                     cancelButtonTitle:@"Cancelar"
-                                                                     otherButtonTitles: nil];
-                                            [alert show];
-                                        }
-                                    }];*/
     
     PFQuery *query = [PFQuery queryWithClassName:@"pacientes"];
     [query whereKey:@"objectId" equalTo:self.txtNoBuscar.text];
@@ -86,16 +70,15 @@ UIAlertView *alert;
                 [queryE findObjectsInBackgroundWithBlock:^(NSArray *objectsHist, NSError *errorh) {
                     if (!errorh) {
                         // The find succeeded.
-                        NSLog(@"Successfully retrieved %d scores.", objectsHist.count);
+                        //NSLog(@"Successfully retrieved %d scores.", objectsHist.count);
                         // Do something with the found objects
                         for (PFObject *objectH in objectsHist) {
                             NSLog(@"OBjHistorial....%@", objectH.objectId);
-                            NSLog(@"Estado-..---%@", objectH);
                             self.txtEstado.text= objectH[@"desc_estado"];
                         }
                     } else {
                         // Log details of the failure
-                        NSLog(@"Error: %@ %@", errorh, [errorh userInfo]);
+                        //NSLog(@"Error: %@ %@", errorh, [errorh userInfo]);
                     }
                 }];
                 
@@ -116,7 +99,7 @@ UIAlertView *alert;
                         
                         
                     } else {
-                        NSString *errorString = [error userInfo][@"error"];
+                       // NSString *errorString = [error userInfo][@"error"];
                         // Show the errorString somewhere and let the user try again.
                     }
                 }];

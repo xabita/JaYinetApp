@@ -222,7 +222,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lBm-AC-VV7">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="1427960059_menu-alt-32.png" style="plain" id="0ZR-Zp-ODy"/>
+                        <barButtonItem key="leftBarButtonItem" image="1427960059_menu-alt-32.png" style="done" id="0ZR-Zp-ODy"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4q7-JW-Z68">
                             <rect key="frame" x="96" y="7" width="128" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -267,7 +267,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hMj-XL-33o">
                                             <rect key="frame" x="17" y="1" width="295" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -284,7 +284,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="adc-6a-zuP">
-                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="LQb-IM-HRs">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="done" id="LQb-IM-HRs">
                             <connections>
                                 <action selector="btnMenu:" destination="Np8-bo-mNw" id="Oqi-Q8-692"/>
                             </connections>
@@ -373,7 +373,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PeA-Ey-T33">
-                        <barButtonItem key="leftBarButtonItem" image="1427960059_menu-alt-32.png" style="plain" id="DHv-eC-9cI"/>
+                        <barButtonItem key="leftBarButtonItem" image="1427960059_menu-alt-32.png" style="done" id="DHv-eC-9cI"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnIniciarSesion" destination="oSW-3l-3GL" id="kYB-cG-Non"/>
@@ -471,7 +471,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="QlX-5o-f7R">
-                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="zzv-tf-8PX">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="done" id="zzv-tf-8PX">
                             <connections>
                                 <action selector="btnMenu:" destination="ulc-69-46w" id="hlT-f3-xRA"/>
                             </connections>
@@ -508,7 +508,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre completo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xiu-OT-VHY">
-                                            <rect key="frame" x="21" y="22" width="291" height="21"/>
+                                            <rect key="frame" x="42" y="22" width="270" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -530,7 +530,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="OKe-8E-I8a">
-                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="8Pt-Oz-U9e">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="done" id="8Pt-Oz-U9e">
                             <connections>
                                 <action selector="btnMenu:" destination="fD1-Z8-ClY" id="Uye-cA-kNv"/>
                             </connections>
@@ -651,7 +651,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kfn-sm-yAM">
-                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="P6V-m7-LH1">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="done" id="P6V-m7-LH1">
                             <connections>
                                 <action selector="btnMenu1:" destination="aL6-G0-Cy2" id="jAE-xo-Wp1"/>
                             </connections>
@@ -817,7 +817,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="UcN-JP-FWJ">
-                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="Cpr-Bv-Ir6">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="done" id="Cpr-Bv-Ir6">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="btnMenu:" destination="Ybp-EB-oZa" id="OcN-tC-Cjs"/>
@@ -936,7 +936,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BKQ-yR-Qz3">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="lUF-qs-6K9">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="done" id="lUF-qs-6K9">
                             <connections>
                                 <action selector="btnMenu:" destination="1tb-In-lLt" id="qar-eR-DNS"/>
                             </connections>
@@ -951,7 +951,7 @@
                                 <segue destination="D59-Bz-6cK" kind="modal" identifier="SagaHistorialEstatus" id="RS2-OO-hYa"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="KoC-d1-5Le">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="KoC-d1-5Le">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="twD-Im-rjj">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1104,7 +1104,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qbp-Nw-cuA">
-                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="M6F-6M-f1s">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="done" id="M6F-6M-f1s">
                             <connections>
                                 <action selector="btnMenu:" destination="9oI-yk-UFC" id="lHi-IA-AUE"/>
                             </connections>
@@ -1158,7 +1158,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="7h4-60-WLy">
-                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="plain" id="uP9-M5-M6P">
+                        <barButtonItem key="leftBarButtonItem" image="1427987532_circle_back_arrow_-32.png" style="done" id="uP9-M5-M6P">
                             <connections>
                                 <action selector="btnMenu:" destination="vde-88-HP3" id="LbJ-Al-X6E"/>
                             </connections>
@@ -1226,7 +1226,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="v2M-Ra-4zt">
-                        <barButtonItem key="leftBarButtonItem" image="1427960059_menu-alt-32.png" style="plain" id="9Pe-iN-joc"/>
+                        <barButtonItem key="leftBarButtonItem" image="1427960059_menu-alt-32.png" style="done" id="9Pe-iN-joc"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenu" destination="9Pe-iN-joc" id="JcG-wq-AMZ"/>
@@ -1268,6 +1268,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iHB-dD-O6X"/>
+        <segue reference="Dr4-YK-nM8"/>
     </inferredMetricsTieBreakers>
 </document>

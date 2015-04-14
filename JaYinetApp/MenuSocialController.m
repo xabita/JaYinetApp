@@ -61,7 +61,7 @@
 
 - (IBAction)btnCerrarSesion:(UIButton *)sender {
     [PFUser logOut];
-    PFUser *currentUser = [PFUser currentUser];
+  //  PFUser *currentUser = [PFUser currentUser];
     [self performSegueWithIdentifier:@"sagaLogout" sender:self];
     
     

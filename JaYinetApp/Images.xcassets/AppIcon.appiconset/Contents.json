@@ -9,7 +9,7 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "estetoscopio58x58.png",
+      "filename" : "estetoscopio87x87.png",
       "scale" : "3x"
     },
     {
@@ -21,7 +21,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "estetoscopio80x80.png",
+      "filename" : "estetoscopio120x120-1.png",
       "scale" : "3x"
     },
     {
@@ -33,7 +33,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "estetoscopio120x120.png",
+      "filename" : "estetoscopio180x180.png",
       "scale" : "3x"
     }
   ],
